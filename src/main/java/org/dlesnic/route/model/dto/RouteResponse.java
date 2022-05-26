@@ -1,4 +1,4 @@
-package org.pwc.route.model.dto;
+package org.dlesnic.route.model.dto;
 
 import java.util.List;
 

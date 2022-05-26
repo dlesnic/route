@@ -1,6 +1,6 @@
-package org.pwc.route.service;
+package org.dlesnic.route.service;
 
-import org.pwc.route.model.dto.RouteResponse;
+import org.dlesnic.route.model.dto.RouteResponse;
 
 
 public interface RouteService {

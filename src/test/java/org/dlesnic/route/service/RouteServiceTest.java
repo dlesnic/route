@@ -1,8 +1,8 @@
-package org.pwc.route.service;
+package org.dlesnic.route.service;
 
 
 import org.junit.jupiter.api.Test;
-import org.pwc.route.model.dto.RouteResponse;
+import org.dlesnic.route.model.dto.RouteResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -33,9 +33,8 @@ public class RouteServiceTest {
 
     @Test
     public void shouldThrowIllegalArgumentExceptionForNoRoute() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            routeService.findRoute("CZE", "BRA");
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class,
+                () -> routeService.findRoute("CZE", "BRA"));
 
         String expectedMessage = "No existing route from CZE to BRA";
         String actualMessage = exception.getMessage();
@@ -46,9 +45,8 @@ public class RouteServiceTest {
 
     @Test
     public void shouldThrowIllegalArgumentExceptionForWrongCountryName() {
-        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            routeService.findRoute("CCC", "BRA");
-        });
+        Exception exception = assertThrows(IllegalArgumentException.class,
+                () -> routeService.findRoute("CCC", "BRA"));
 
         String expectedMessage = "Graph must contain the source vertex!";
         String actualMessage = exception.getMessage();
